@@ -1,0 +1,1 @@
+A Google/Genkit wrapper scaffold for HREVN baseline, AER receipts, Cloud Logging telemetry and prudent Vertex metadata extensions.

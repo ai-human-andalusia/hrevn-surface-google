@@ -1,0 +1,32 @@
+{
+  "name": "@hrevn/genkit-plugin",
+  "version": "0.2.0",
+  "description": "HREVN Genkit integration (Developer Alpha): thin wrapper around the HREVN managed integrity service.",
+  "main": "dist/index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "echo 'Developer Alpha - build pipeline not added yet'",
+    "test:client": "tsx examples/managed_api_client.ts",
+    "test:flow": "tsx examples/treasury_transfer_flow.ts"
+  },
+  "devDependencies": {
+    "dotenv": "^16.6.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "hrevn",
+    "genkit",
+    "google-cloud",
+    "vertex-ai",
+    "aer",
+    "agents"
+  ],
+  "hrevn_metadata": {
+    "display_name": "HREVN Genkit Integration",
+    "tagline": "Developer Alpha wrapper for audit trail and AER receipts in Google/Genkit flows.",
+    "status": "developer-alpha",
+    "aer_semantics": "canonical"
+  }
+}
