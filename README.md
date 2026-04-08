@@ -62,6 +62,7 @@ cp .env.example .env
 
 For the supported technical alpha path, see:
 - `docs/GOOGLE_ALPHA_TESTING.md`
+- `docs/ALPHA_EXECUTION_TRACE.md`
 
 ## Recommended test sequence
 
