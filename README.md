@@ -7,7 +7,8 @@ Anthropic changes the skill.
 Google changes the middleware.  
 HREVN does not change its truth.
 
-This repo is a Google / Genkit-facing wrapper surface for the live HREVN managed runtime.
+This repo is a Google / Genkit-facing wrapper surface for the live HREVN
+managed runtime.
 
 ## Why HREVN
 
@@ -40,6 +41,11 @@ core runtime into the wrapper.
 - a middleware path for baseline-before-flow and bundle-after-flow patterns
 - a public bridge to `https://api.hrevn.com`
 
+Current supported alpha path:
+- client-first
+- flow-second
+- managed runtime behind `https://api.hrevn.com`
+
 ## What it is not yet
 - not the private HREVN runtime
 - not a final production npm package
@@ -53,6 +59,9 @@ npm install
 cp .env.example .env
 # then edit .env and set HREVN_API_KEY
 ```
+
+For the supported technical alpha path, see:
+- `docs/GOOGLE_ALPHA_TESTING.md`
 
 ## Recommended test sequence
 
@@ -101,6 +110,7 @@ The live managed endpoint is:
 Canonical semantics stay in the managed runtime and in the private HREVN core.
 
 ## Current status
-This is a functional preview, not a finished production Google plugin.
-The core logic and AER generation stay in the VPS-backed managed runtime.
-The current goal is a credible developer test path, not a final package release.
+This is a technical alpha with a real developer test path.
+The supported first path is client-first and flow-second against the live
+managed runtime. It is not presented as a finished production package or a
+final Google-native distribution.
