@@ -22,9 +22,10 @@ Use the same BaselineResult semantics and the same AER semantics as OpenAI/Codex
 4. keep Google-specific metadata as extension only
 
 ## Supported alpha sequence
-1. test the managed API client first
-2. test the flow wrapper second
-3. keep the managed runtime as the source of truth
+1. run `hrevn-cli setup --key <issued-alpha-key>`
+2. test the managed API client first
+3. test the flow wrapper second
+4. keep the managed runtime as the source of truth
 
 ## Current example files
 - `src/client.ts`

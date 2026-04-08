@@ -3,10 +3,14 @@
   "version": "0.2.0",
   "description": "HREVN Genkit integration (Developer Alpha): thin wrapper around the HREVN managed integrity service.",
   "main": "dist/index.js",
+  "bin": {
+    "hrevn-cli": "./bin/hrevn-cli.js"
+  },
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
     "build": "echo 'Developer Alpha - build pipeline not added yet'",
+    "setup:alpha": "node ./bin/hrevn-cli.js setup",
     "test:client": "tsx examples/managed_api_client.ts",
     "test:flow": "tsx examples/treasury_transfer_flow.ts"
   },

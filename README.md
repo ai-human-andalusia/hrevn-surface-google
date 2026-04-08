@@ -56,19 +56,23 @@ Current supported alpha path:
 
 ```bash
 npm install
-cp .env.example .env
-# then edit .env and set HREVN_API_KEY
+npx hrevn-cli setup --key <issued-alpha-key>
 ```
 
 For the supported technical alpha path, see:
 - `docs/GOOGLE_ALPHA_TESTING.md`
 - `docs/ALPHA_EXECUTION_TRACE.md`
 
+The bootstrapper validates the live runtime connection, updates `.env` without
+deleting other variables, prints a real baseline result, and writes a
+`hrevn_test_flow.ts` example if it does not already exist.
+
 ## Recommended test sequence
 
 Run the tests in this order:
-1. `npx tsx examples/managed_api_client.ts`
-2. `npx tsx examples/treasury_transfer_flow.ts`
+1. `npx hrevn-cli setup --key <issued-alpha-key>`
+2. `npx tsx examples/managed_api_client.ts`
+3. `npx tsx examples/treasury_transfer_flow.ts`
 
 ## First test: client
 

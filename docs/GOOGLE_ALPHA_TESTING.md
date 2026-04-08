@@ -22,10 +22,22 @@ In this alpha, the supported test sequence is:
 git clone https://github.com/ai-human-andalusia/hrevn-surface-google
 cd hrevn-surface-google
 npm install
+npx hrevn-cli setup --key <issued-alpha-key>
+```
+
+The bootstrapper:
+- validates the live HREVN connection
+- updates `.env` without deleting other variables
+- prints a real baseline result
+- writes `hrevn_test_flow.ts` if it does not already exist
+
+If you prefer the manual path, you can still:
+
+```bash
 cp .env.example .env
 ```
 
-Then set your issued alpha key in `.env`.
+and then set your issued alpha key in `.env`.
 
 ## First test: client
 
