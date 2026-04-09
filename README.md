@@ -1,12 +1,5 @@
 # HREVN Genkit Integration (Developer Alpha)
 
-**Un solo núcleo. Tres superficies. Mismo resultado verificable.**
-
-OpenAI changes the bundle.  
-Anthropic changes the skill.  
-Google changes the middleware.  
-HREVN does not change its truth.
-
 This repo is a Google / Genkit-facing wrapper surface for the live HREVN
 managed runtime.
 
@@ -136,3 +129,9 @@ This is a technical alpha with a real developer test path.
 The supported first path is client-first and flow-second against the live
 managed runtime. It is not presented as a finished production package or a
 final Google-native distribution.
+
+## npm publication note
+The package is intended to be published as a public developer alpha:
+- thin wrapper
+- real runtime behind `https://api.hrevn.com`
+- not a final Google-native SDK

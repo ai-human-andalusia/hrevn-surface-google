@@ -2,19 +2,41 @@
   "name": "@hrevn/genkit-plugin",
   "version": "0.2.0",
   "description": "HREVN Genkit integration (Developer Alpha): thin wrapper around the HREVN managed integrity service.",
+  "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "bin": {
     "hrevn-cli": "./bin/hrevn-cli.js"
   },
-  "private": true,
-  "license": "UNLICENSED",
+  "files": [
+    "dist",
+    "bin",
+    "examples",
+    "docs/GOOGLE_ALPHA_TESTING.md",
+    "docs/ALPHA_EXECUTION_TRACE.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
   "scripts": {
-    "build": "echo 'Developer Alpha - build pipeline not added yet'",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
     "setup:alpha": "node ./bin/hrevn-cli.js setup",
     "test:client": "tsx examples/managed_api_client.ts",
-    "test:flow": "tsx examples/treasury_transfer_flow.ts"
+    "test:flow": "tsx examples/treasury_transfer_flow.ts",
+    "test:gap": "tsx examples/governance_gap_example.ts"
   },
   "devDependencies": {
+    "@types/node": "^24.6.0",
     "dotenv": "^16.6.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
