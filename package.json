@@ -12,7 +12,7 @@
     }
   },
   "bin": {
-    "hrevn-cli": "./bin/hrevn-cli.js"
+    "hrevn-cli": "bin/hrevn-cli.cjs"
   },
   "files": [
     "dist",
@@ -30,7 +30,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepublishOnly": "npm run build",
-    "setup:alpha": "node ./bin/hrevn-cli.js setup",
+    "setup:alpha": "node ./bin/hrevn-cli.cjs setup",
     "test:client": "tsx examples/managed_api_client.ts",
     "test:flow": "tsx examples/treasury_transfer_flow.ts",
     "test:gap": "tsx examples/governance_gap_example.ts"

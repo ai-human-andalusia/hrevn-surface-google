@@ -47,6 +47,14 @@ Current supported alpha path:
 
 ## Quick Start
 
+Install the published developer-alpha package:
+
+```bash
+npm install @hrevn/genkit-plugin
+```
+
+Or, if you want to work from this repo directly:
+
 ```bash
 npm install
 npx hrevn-cli setup --key <issued-alpha-key>
@@ -125,13 +133,9 @@ The live managed endpoint is:
 Canonical semantics stay in the managed runtime and in the private HREVN core.
 
 ## Current status
-This is a technical alpha with a real developer test path.
-The supported first path is client-first and flow-second against the live
-managed runtime. It is not presented as a finished production package or a
-final Google-native distribution.
-
-## npm publication note
-The package is intended to be published as a public developer alpha:
+This is a technical alpha with a real developer test path and a public npm
+package:
+- `@hrevn/genkit-plugin`
 - thin wrapper
 - real runtime behind `https://api.hrevn.com`
 - not a final Google-native SDK
