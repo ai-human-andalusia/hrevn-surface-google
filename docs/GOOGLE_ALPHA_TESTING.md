@@ -15,6 +15,7 @@ Google / Genkit wrapper -> managed API client -> `https://api.hrevn.com`
 In this alpha, the supported test sequence is:
 1. client first
 2. flow second
+3. governance gap example third
 
 ## Setup
 
@@ -60,6 +61,23 @@ Expected result:
 - a successful simulated treasury flow
 - wrapped by the HREVN middleware path
 - still using the managed runtime as the source of truth
+
+## Optional third test: governance gap
+
+```bash
+npx tsx examples/governance_gap_example.ts
+```
+
+Expected result:
+- a real `BaselineResult`
+- visible `missing_required_blocks`
+- visible `risk_flags`
+- visible `recommended_next_step`
+- visible `remedy_payload`
+
+This example is intentionally incomplete. Its purpose is to show how the live
+runtime guides the developer toward the missing governance evidence instead of
+only returning a pass/fail signal.
 
 ## Important notes
 

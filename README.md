@@ -73,6 +73,7 @@ Run the tests in this order:
 1. `npx hrevn-cli setup --key <issued-alpha-key>`
 2. `npx tsx examples/managed_api_client.ts`
 3. `npx tsx examples/treasury_transfer_flow.ts`
+4. `npx tsx examples/governance_gap_example.ts`
 
 ## First test: client
 
@@ -86,8 +87,23 @@ npx tsx examples/managed_api_client.ts
 npx tsx examples/treasury_transfer_flow.ts
 ```
 
+## Optional third test: governance gap
+
+```bash
+npx tsx examples/governance_gap_example.ts
+```
+
+This intentionally sends an incomplete governance-oriented record so the live
+runtime returns:
+- `missing_required_blocks`
+- `risk_flags`
+- `recommended_next_step`
+- `remedy_payload`
+
 The first test validates direct connectivity to the live managed API.
 The second test validates the middleware path around a simulated treasury flow.
+The optional third test shows why the remedy path matters when governance
+evidence is still incomplete.
 
 ## What is already proven in this repo
 - the TypeScript client can call the live managed API
@@ -100,6 +116,7 @@ The second test validates the middleware path around a simulated treasury flow.
 - `src/adapters/vertex_metadata.ts`
 - `examples/managed_api_client.ts`
 - `examples/treasury_transfer_flow.ts`
+- `examples/governance_gap_example.ts`
 - `docs/integration/GENKIT_INTEGRATION.md`
 - `docs/bundle/GOOGLE_BUNDLE_DECISIONS.md`
 - `docs/references/AER_STANDARD_V1.md`
